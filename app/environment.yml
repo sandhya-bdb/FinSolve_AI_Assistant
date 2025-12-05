@@ -1,0 +1,48 @@
+name: rbac_rag_chatbot
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+  - pip
+
+  # ---- Core backend ----
+  - fastapi
+  - uvicorn
+  - requests
+
+  # ---- UI ----
+  - streamlit
+
+  # ---- Database ----
+  - duckdb
+
+  # ---- CPU Torch backend ----
+  - pytorch
+  - pytorch-cpu      # optional but preferred on systems without GPU
+
+  # ---- Useful utilities ----
+  - python-dotenv
+  - pandas
+  - pillow
+
+  # ---- Install pip-only packages ----
+  - pip:
+      # New LangChain structure (required)
+      - langchain==0.2.5
+      - langchain-community==0.2.5
+      - langchain-chroma>=0.1.4
+      - langchain-huggingface>=0.0.9
+
+      # Document loaders + parsing
+      - unstructured
+      - pdfminer.six
+      - python-magic
+      - markdown
+
+      # LLM + embeddings
+      - huggingface-hub>=0.20.3
+
+      # Extra utilities
+      - tqdm

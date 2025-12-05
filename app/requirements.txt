@@ -1,0 +1,35 @@
+# ---- Core Backend ----
+fastapi>=0.90.0
+uvicorn[standard]>=0.20.0
+requests>=2.28.0
+
+# ---- Frontend ----
+streamlit>=1.20.0
+
+# ---- Database ----
+duckdb>=0.10.0
+
+# ---- Torch backend (for embeddings) ----
+torch>=1.13.0
+
+# ---- LangChain (Compatible Versions) ----
+langchain==0.2.10
+langchain-community==0.2.10
+langchain-chroma==0.1.4
+
+
+# ---- Document loaders & processing ----
+unstructured
+pdfminer.six
+python-magic
+markdown
+pandas
+pillow
+
+# ---- HuggingFace Hub ----
+huggingface-hub>=0.20.3
+sentence-transformers>=2.2.2
+
+# ---- Utilities ----
+tqdm
+python-dotenv
